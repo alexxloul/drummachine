@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#grid {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.pad {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: #444;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.pad:hover {
+    background-color: #666;
+}
+
+#controls {
+    margin-top: 20px;
+}

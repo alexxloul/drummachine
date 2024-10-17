@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Machine</title>
+    <link rel="stylesheet" href="style.css"> <!-- Σύνδεση με το CSS αρχείο -->
+</head>
+<body>
+    <h1>Drum Machine</h1>
+
+    <!-- Grid με κουμπιά για τους ήχους -->
+    <div id="grid">
+        <button class="pad" id="kick">Kick</button>
+        <button class="pad" id="snare">Snare</button>
+        <button class="pad" id="hihat">Hi-Hat</button>
+    </div>
+
+    <!-- Στοιχεία ελέγχου για tempo -->
+    <div id="controls">
+        <label for="tempo">Tempo:</label>
+        <input type="number" id="tempo" value="120" min="60" max="200"> bpm
+        <button id="play">Play</button>
+        <button id="stop">Stop</button>
+    </div>
+
+    <!-- Σύνδεση με το εξωτερικό αρχείο JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebAudio Drum Machine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>WebAudio Drum Machine</h1>
+  <div id="drum-machine">
+    <div id="controls">
+      <label for="kit">Kit:</label>
+      <select id="kit">
+        <option value="techno">Techno</option>
+        <option value="rock">Rock</option>
+      </select>
+
+      <label for="effect">Effect:</label>
+      <select id="effect">
+        <option value="none">None</option>
+        <option value="peculiar">Peculiar</option>
+      </select>
+
+      <label for="tempo">Tempo:</label>
+      <input type="number" id="tempo" value="120" min="60" max="200"> bpm
+
+      <button id="play">Play</button>
+      <button id="stop">Stop</button>
+    </div>
+
+    <div id="grid">
+      <div class="track" id="kick-track"></div>
+      <div class="track" id="snare-track"></div>
+      <div class="track" id="hihat-track"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+    // Εδώ είναι ο κώδικας JavaScript για τη λειτουργικότητα
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+    // Φόρτωση των ήχων
+    const kick = new Audio('sounds/kick.wav');
+    const snare = new Audio('sounds/snare.wav');
+    const hihat = new Audio('sounds/hihat.wav');
+
+    // Λειτουργικότητα αναπαραγωγής
+    const playSound = (sound) => {
+      const source = audioContext.createBufferSource();
+      const request = new XMLHttpRequest();
+      request.open('GET', sound.src, true);
+      request.responseType = 'arraybuffer';
+
+      request.onload = function () {
+        audioContext.decodeAudioData(request.response, function (buffer) {
+          source.buffer = buffer;
+          source.connect(audioContext.destination);
+          source.start(0);
+        });
+      };
+
+      request.send();
+    };
+
+    document.getElementById('play').addEventListener('click', () => {
+      playSound(kick);
+    });
+
+</script>
+</body>
+
+
+
+</html> -->
